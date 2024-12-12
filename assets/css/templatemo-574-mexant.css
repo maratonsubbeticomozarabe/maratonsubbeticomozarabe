@@ -1237,12 +1237,13 @@ page heading
 */
 
 .page-heading {
-  background-image: url(../images/heading-bg.jpg);
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  padding: 215px 0px 120px 0px;
-  text-align: center;
+    background-color: #212741;
+    /*background-image: url(../images/heading-bg.jpg);*/
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 215px 0px 120px 0px;
+    text-align: center;
 }
 
 .page-heading h2 {
