@@ -1246,12 +1246,12 @@ page heading
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 215px 0px 120px 0px;
+    padding: 20px 0px 20px 0px;
     text-align: center;
 }
 
 .page-heading h2 {
-  font-size: 56px;
+  font-size: 10px;
   color: #083c6c;
   font-weight: 700;
 }
