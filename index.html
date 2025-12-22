@@ -229,28 +229,31 @@
             width: 100%;
             border-collapse: collapse;
             margin-top: 30px;
-            background: rgba(255,255,255,0.05);
+            background-color: var(--text) !important;
             border-radius: 10px;
             overflow: hidden;
+            color: var(--secondary);
         }
 
             .pricing-table th, .pricing-table td {
                 padding: 20px;
                 text-align: left;
                 border-bottom: 1px solid rgba(254, 229, 206, 0.1);
+                color: var(--primary);
             }
 
             .pricing-table th {
-                background-color: rgba(23, 144, 177, 0.2);
-                color: var(--secondary);
+                background-color: var(--text) !important;
                 font-weight: 700;
                 text-transform: uppercase;
+                color: var(--primary);
             }
 
         .price-col {
             font-weight: bold;
             font-size: 1.1rem;
-            color: rgba(254, 229, 206, 0.5); /* Color apagado por defecto */
+            color: var(--secondary);
+            background-color: var(--text) !important;
         }
 
             .price-col.active-price {
@@ -360,6 +363,21 @@
             font-size: 0.9rem;
             opacity: 0.7;
         }
+
+
+        /* La mitad de la imagen */
+        .carreras-image-col {
+            flex: 1; /* Ocupa el 50% del espacio disponible */
+            min-width: 300px; /* Evita que se haga demasiado pequeña antes de saltar */
+        }
+
+            .carreras-image-col img {
+                width: 100%;
+                height: auto;
+                border-radius: 15px; /* Bordes redondeados para estética moderna */
+                box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Sombra para darle profundidad */
+                border: 2px solid var(--secondary); /* Un fino borde con el color corporativo */
+            }
     </style>
 </head>
 <body>
@@ -371,9 +389,6 @@
             <ul class="nav-links">
                 <li><a href="#carreras">Carreras</a></li>
                 <li><a href="#senderismo">Senderismo</a></li>
-                <li><a href="#fotos">Fotos</a></li>
-                <li><a href="#impacto">Impacto</a></li>
-                <li><a href="#prensa">Prensa</a></li>
                 <li><a href="#inscripciones" class="cta-btn">Inscripciones</a></li>
             </ul>
         </div>
@@ -388,16 +403,19 @@
         <div class="hero-content">
             <h1>Corre por el <strong>Camino Mozárabe de La Subbética Cordobesa</strong></h1>
             <p>52 kilómetros o 25 kilómetros</p>
-            <a href="/inscripciones" class="cta-btn" style="font-size: 1.2rem; padding: 15px 40px;">INSCRIBIRSE AHORA</a>
+            <a href="/inscripciones" target="_blank" class="cta-btn" style="font-size: 1.2rem; padding: 15px 40px;">INSCRIBIRSE AHORA</a>
         </div>
     </div>
 
     <section id="carreras">
         <h2 class="section-title">Las Carreras</h2>
+        <div class="carreras-image-col">
+            <img src="2026/cartel-maratonsubbeticomozarabe26.png" alt="Cartel Oficial Carrera Mozárabe Subbética Córdoba">
+        </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
 
-            <a href="/reglamento" class="primary">VER REGLAMENTO</a>
-            <a href="/inscripciones" class="primary">IR A INSCRIPCIONES</a>
+            <a href="/reglamento" target="_blank" class="primary">VER REGLAMENTO</a>
+            <a href="/inscripciones" target="_blank" class="primary">IR A INSCRIPCIONES</a>
         </div>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
             <div>
@@ -472,7 +490,7 @@
         </table>
 
         <div style="text-align: center; margin-top: 40px;">
-            <a href="/inscripciones" class="primary" style="padding: 15px 50px;">IR A INSCRIPCIONES</a>
+            <a href="/inscripciones" target="_blank" class="primary" style="padding: 15px 50px;">IR A INSCRIPCIONES</a>
         </div>
     </section>
 
