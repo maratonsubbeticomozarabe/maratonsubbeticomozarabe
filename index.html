@@ -1,7 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Maratón Subbético Mozárabe - 28 de Marzo 2026 - 50K | 25K</title>
+    <meta name="description" content="Participa en la carrera por el Camino Mozárabe en la Subbética Cordobesa. Modalidades 52K, 25K y senderismo. ¡Inscríbete ahora!">
+    <meta name="keywords" content="running, subbetica, camino mozárabe, cordoba, trail running, ultra trail, senderismo andalucia">
+    <meta name="author" content="HilandoPixel">
+    <meta name="robots" content="index, follow">
+
+    <meta property="og:title" content="Maratón Subbético Mozárabe - 28 de Marzo 2026 - 50K | 25K" />
+    <meta property="og:description" content="¿Preparado para el desafío? 52K y 25K por el Camino Mozárabe en el corazón de la Subbética cordobesa.">
+    <meta property="og:image" content="https://maratonsubbeticomozarabe.com/2026/maratonsubbeticomozarabe.png">
+    <meta property="og:url" content="https://maratonsubbeticomozarabe.com">
+    <meta property="og:type" content="website">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-79Z5JHY3YF"></script>
     <script>
@@ -10,404 +23,521 @@
         gtag('js', new Date());
         gtag('config', 'G-79Z5JHY3YF');
     </script>
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "SportsEvent",
+          "name": "Maratón Subbético Mozárabe",
+          "description": "Evento de running y senderismo en la Subbética Cordobesa.",
+          "startDate": "2026-03-28T08:00",
+          "location": {
+            "@type": "Place",
+            "name": "Parque Natural Sierras Subbéticas",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Córdoba",
+              "addressRegion": "AN",
+              "addressCountry": "ES"
+            }
+          }
+        }
+    </script>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="author" content="Maraton Subbetico Mozarabe">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <meta content="carrera, mozarabe, subbetica, running, run" name="keywords">
-    <meta content="Maratón Subbético Mozárabe - Carreta de 50K | 15K desde Encinas Reales a Doña Mencía pasando por Lucena y Cabra por el Camino Mozárabe de Santiago. Individual, relevos, equipos... tú eliges. Vía Verde de la Subbética." name="description">
-    <meta property="og:image" content="https://maratonsubbeticomozarabe.com/2026/maratonsubbeticomozarabe.png">
-    <meta property="og:title" content="Maratón Subbético Mozárabe - 28 de Marzo 2026 - 50K | 15K" />
-    <meta property="og:description" content="Maratón Subbético Mozárabe - Carreta de 50K | 15K desde Encinas Reales a Doña Mencía pasando por Lucena y Cabra por el Camino Mozárabe de Santiago. Individual, relevos, equipos... tú eliges. Vía Verde de la Subbética." />
-    <title>Maratón Subbético Mozárabe - 28 de Marzo 2026 - 50K | 15K</title>
-    <link rel="icon" href="assets/favicon.ico">
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-574-mexant.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
-    <!--
+    <style>
+        /* VARIABLES Y RESET */
+        :root {
+            --primary: #062744;
+            --secondary: #1790b1;
+            --text: #fee5ce;
+            --white: #ffffff;
+            --dark-overlay: rgba(6, 39, 68, 0.75);
+            --transition: all 0.3s ease;
+        }
 
-    TemplateMo 574 Mexant
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    https://templatemo.com/tm-574-mexant
+        html {
+            scroll-behavior: smooth;
+        }
 
-    -->
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background-color: var(--secondary);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVBAR STICKY */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            transition: var(--transition);
+            padding: 20px 0;
+            background: transparent;
+        }
+
+            header.scrolled {
+                background-color: var(--primary);
+                box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+                padding: 10px 0;
+            }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .primary {
+            background-color: var(--primary);
+            color: var(--secondary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+        .logo {
+            font-weight: 900;
+            font-size: 1.5rem;
+            color: var(--secondary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+        }
+
+            .nav-links a {
+                font-weight: 600;
+                font-size: 0.9rem;
+                transition: var(--transition);
+            }
+
+                .nav-links a:hover {
+                    color: var(--secondary);
+                }
+
+        .cta-btn {
+            background-color: var(--secondary);
+            color: var(--primary);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: bold;
+        }
+
+            .cta-btn:hover {
+                background-color: var(--text);
+                color: var(--primary);
+            }
+
+        /* HERO SECTION CON VIDEO */
+        .hero {
+            height: 100vh;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .video-bg {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -2;
+            object-fit: cover;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--dark-overlay);
+            z-index: -1;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* SECCIONES GENÉRICAS */
+        section {
+            padding: 80px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--primary);
+            position: relative;
+        }
+
+            .section-title::after {
+                content: '';
+                display: block;
+                width: 60px;
+                height: 4px;
+                background: var(--text);
+                margin: 10px auto 0;
+            }
+
+        /* TABLA DE INSCRIPCIONES RESPONSIVE */
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 30px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+            .pricing-table th, .pricing-table td {
+                padding: 20px;
+                text-align: left;
+                border-bottom: 1px solid rgba(254, 229, 206, 0.1);
+            }
+
+            .pricing-table th {
+                background-color: rgba(23, 144, 177, 0.2);
+                color: var(--secondary);
+                font-weight: 700;
+                text-transform: uppercase;
+            }
+
+        .price-col {
+            font-weight: bold;
+            font-size: 1.1rem;
+            color: rgba(254, 229, 206, 0.5); /* Color apagado por defecto */
+        }
+
+            .price-col.active-price {
+                color: var(--secondary);
+                font-size: 1.3rem;
+                position: relative;
+            }
+
+                .price-col.active-price::after {
+                    content: 'VIGENTE';
+                    display: block;
+                    font-size: 0.6rem;
+                    color: var(--text);
+                }
+
+        .mod-desc {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-top: 5px;
+        }
+
+        /* ESTILOS MOBILE */
+        .mobile-menu-btn {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 70%;
+                background: var(--primary);
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                transition: 0.5s;
+                box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+            }
+
+                .nav-links.active {
+                    right: 0;
+                }
+
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+
+            /* Tabla responsive tipo tarjeta */
+            .pricing-table, .pricing-table thead, .pricing-table tbody, .pricing-table th, .pricing-table td, .pricing-table tr {
+                display: block;
+                background-color: var(--text);
+            }
+
+                .pricing-table thead tr {
+                    position: absolute;
+                    top: -9999px;
+                    left: -9999px;
+                }
+
+                .pricing-table tr {
+                    border-bottom: 2px solid var(--secondary);
+                    margin-bottom: 20px;
+                }
+
+                .pricing-table td {
+                    border: none;
+                    position: relative;
+                    padding-left: 50%;
+                    text-align: right;
+                    color: var(--primary);
+                }
+
+                    .pricing-table td:before {
+                        position: absolute;
+                        top: 20px;
+                        left: 20px;
+                        width: 45%;
+                        padding-right: 10px;
+                        white-space: nowrap;
+                        text-align: left;
+                        font-weight: bold;
+                        color: var(--secondary);
+                        content: attr(data-label);
+                    }
+
+            .mod-desc {
+                text-align: right;
+                display: block;
+                margin-left: auto;
+                color: var(--primary);
+            }
+        }
+
+        footer {
+            background: #041a2f;
+            text-align: center;
+            padding: 40px;
+            margin-top: 50px;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+    </style>
 </head>
-
 <body>
-    <!-- ***** Header Area Start ***** -->
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="index.html" class="logo">
-                            <img src="2025/cenefa-2025-logo.png">
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="/index">2026</a></li>
-                            <li class="scroll-to-section"><a href="/index#senderismo">Senderismo</a></li>
-                            <li class="scroll-to-section"><a href="/gdr">GDR</a></li>
-                            <li class="scroll-to-section"><a href="/impacto-economico">Impacto</a></li>
-                            <li class="has-sub">
-                                <a href="javascript:void(0)">Otras Ediciones</a>
-                                <ul class="sub-menu">
-                                    <li><a href="2025">2025</a></li>
-                                    <li><a href="2024">2024</a></li>
-                                    <li><a href="2023">2023</a></li>
-                                </ul>
-                            </li>
-                            <li class="has-sub">
-                                <a href="javascript:void(0)">Turismo</a>
-                                <ul class="sub-menu">
-                                    <li><a href="/alojamientos">Alojamientos</a></li>
-                                    <li><a href="/visita-museo-vino">Visita Museo Vino</a></li>
-                                    <li><a href="/dona-mencia">Doña Mencía</a></li>
-                                    <li><a href="/cabra">Cabra</a></li>
-                                    <li><a href="/lucena">Lucena</a></li>
-                                    <li><a href="/encinas-reales">Encinas Reales</a></li>
-                                </ul>
-                            </li>
-                            <li><a class="fa-brands fa-facebook" href="https://www.facebook.com/profile.php?id=61554767609273" target="_blank"></a></li>
-                            <li><a class="fa-brands fa-instagram" href="https://www.instagram.com/maratonsubbeticomozarabe/" target="_blank"></a></li>
-                            <li><a class="fa fa-envelope" href="mailto:rsrunningseries@gmail.com" target="_blank"></a></li>
-                            <li><a>2025</a></li>
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                    </nav>
-                </div>
-            </div>
+
+    <header id="navbar">
+        <div class="nav-container">
+            <div class="logo"><img src="2026/logo-msm26-small.png" /></div>
+            <div class="mobile-menu-btn" onclick="toggleMenu()">☰</div>
+            <ul class="nav-links">
+                <li><a href="#carreras">Carreras</a></li>
+                <li><a href="#senderismo">Senderismo</a></li>
+                <li><a href="#fotos">Fotos</a></li>
+                <li><a href="#impacto">Impacto</a></li>
+                <li><a href="#prensa">Prensa</a></li>
+                <li><a href="#inscripciones" class="cta-btn">Inscripciones</a></li>
+            </ul>
         </div>
     </header>
-    <!-- ***** Header Area End ***** -->
 
-    <div class="page-heading">
-        <section class="top-section" id="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="white-text">APERTURA DE INSCRIPCIONES 23 DE DICIEMBRE</h1>
-                        <div class="left-image">
-                            <a href="2026/cartel-maratonsubbeticomozarabe26.png" target="_blank"><img src="2026/cartel-maratonsubbeticomozarabe26.png" alt=""></a>
-                        </div>
-                    </div>
-                    <div class="col-lg-12">
-                        <h1 class="white-text">APERTURA DE INSCRIPCIONES 23 DE DICIEMBRE</h1>
-
-                        <div class="left-image">
-                            <a><img src="2026/fecha.png" alt=""></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
+    <div class="hero">
+        <video class="video-bg" autoplay muted loop playsinline>
+            <source src="2026/video-maratonsubbeticomozarabe-2025-web-compress.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Corre por el <strong>Camino Mozárabe de La Subbética Cordobesa</strong></h1>
+            <p>52 kilómetros o 25 kilómetros</p>
+            <a href="/inscripciones" class="cta-btn" style="font-size: 1.2rem; padding: 15px 40px;">INSCRIBIRSE AHORA</a>
+        </div>
     </div>
 
-    <section class="" id="">
-        <div class="container">
-            <div class="row">
-                <div class="green-button  white-text ">
-                    <a class="" href="2025" target="_blank">VER EDICIÓN 2025</a>
-                </div>
-                <div class="green-button  white-text ">
-                    <a class="" href="2024" target="_blank">VER EDICIÓN 2024</a>
-                </div>
-                <div class="green-button  white-text ">
-                    <a class="" href="2023" target="_blank">VER EDICIÓN 2023</a>
-                </div>
+    <section id="carreras">
+        <h2 class="section-title">Las Carreras</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+
+            <a href="/reglamento" class="primary">VER REGLAMENTO</a>
+            <a href="/inscripciones" class="primary">IR A INSCRIPCIONES</a>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
+            <div>
+                <h3>50K</h3>
+                <p>Recorre los paisajes del Camino Mozárabe de Santiago en La Subbética al sur de Córdoba desde Doña Mencía hasta Encinas Reales pasando por las antiguas Estaciones de Ferrocarril de Cabra y Lucena en la Vía Verde del Aceite</p>
             </div>
+            <div>
+                <h3>25K</h3>
+
+                <p>Recorre los paisajes del Camino Mozárabe de Santiago en La Subbética al sur de Córdoba desde Lucena a Encinas Reales</p>
             </div>
-        </section>
+        </div>
+    </section>
 
+    <section id="senderismo">
+        <h2 class="section-title">Senderismo</h2>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
 
+            <a class="primary">PRÓXIMAMENTE</a>
+        </div>
+        <p style="text-align: center">Disfruta del Camino Mozárabe a tu ritmo, descubriendo la riqueza cultural de la Subbética. Desde Cabra a Lucena por la Vía Verde del Aceite.</p>
+    </section>
 
-                <section class="partners">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12 col-sm-12 col-12">
-                                <p class="blue-light-text">Patrocinadores</p>
-                            </div>
-                            <div class="col-lg-6 col-sm-12 col-12">
-                                <div class="item">
-                                    <a href="https://www.gruposubbetica.com/" target="_blank"><img src="assets/images/logo_gdr_subbetica_blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-12 col-12">
-                                <div class="item">
-                                    <a href="https://cordobaturismo.es/" target="_blank"><img src="assets/images/logo_patronato_turismo_cordoba_blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-6 col-sm-12 col-12">
-                                <div class="item">
-                                    <a href="https://www.dipucordoba.es/" target="_blank"><img src="assets/images/logo_diputacion_blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12 col-sm-12 col-12">
-                                <p class="blue-light-text">Partners Institucionales</p>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://fadmes.es/" target="_blank"><img src="assets/images/logo_fadmes_blanco.png" alt=""></a>
-                                </div>
-                            </div>
+    <section id="inscripciones">
+        <h2 class="section-title">Inscripciones y Precios</h2>
+        <p style="text-align: center; margin-bottom: 20px;">
+            Aprovecha el precio reducido inscribiéndote antes del <span style="color:var(--primary); font-weight:bold">16 de Febrero</span>.
+        </p>
 
-                            <div class="col-lg-4 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://donamencia.es/" target="_blank"><img src="assets/images/logo_donamencia_blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://encinasreales.es/" target="_blank"><img src="assets/images/logo_encinasreales_blanco.png" alt=""></a>
-                                </div>
-                            </div>
+        <table class="pricing-table">
+            <thead>
+                <tr>
+                    <th>Modalidad</th>
+                    <th>Hasta 15/02</th>
+                    <th>Desde 16/02</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="" data-label="Modalidad">
+                        50K Individual
+                        <div class="mod-desc">Prueba reina de inicio a la ultra distancia.</div>
+                    </td>
+                    <td data-label="Hasta 15/02/26" class="price-col price-early" data-price="40">40€</td>
+                    <td data-label="Desde 16/02/26" class="price-col price-late" data-price="45">45€</td>
+                </tr>
+                <tr>
+                    <td data-label="Modalidad">
+                        50K Equipos (5 pax)
+                        <div class="mod-desc">Corred juntos, llegad juntos.</div>
+                    </td>
+                    <td data-label="Hasta 15/02/26" class="price-col price-early" data-price="200">200€</td>
+                    <td data-label="Desde 16/02/26" class="price-col price-late" data-price="225">225€</td>
+                </tr>
+                <tr>
+                    <td data-label="Modalidad">
+                        50K Relevos
+                        <div class="mod-desc">Estrategia y compañerismo.</div>
+                    </td>
+                    <td data-label="Hasta 15/02/26" class="price-col price-early" data-price="69">69€</td>
+                    <td data-label="Desde 16/02/26" class="price-col price-late" data-price="75">75€</td>
+                </tr>
+                <tr>
+                    <td data-label="Modalidad">
+                        25K Individual
+                        <div class="mod-desc">Distancia media explosiva.</div>
+                    </td>
+                    <td data-label="Hasta 15/02/26" class="price-col price-early" data-price="25">25€</td>
+                    <td data-label="Desde 16/02/26" class="price-col price-late" data-price="28">28€</td>
+                </tr>
+            </tbody>
+        </table>
 
-                            <div class="col-lg-4 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://cabra.eu/" target="_blank"><img src="assets/images/logo_cabra_blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-4 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://lucena.es" target="_blank"><img src="assets/images/logo_lucena_blanco.png" alt=""></a>
-                                </div>
-                            </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="/inscripciones" class="primary" style="padding: 15px 50px;">IR A INSCRIPCIONES</a>
+        </div>
+    </section>
 
-                        </div>
+    <footer>
+        <p>Maratón Subbético Mozárabe. CD Running Series &copy;Todos los derechos reservados.</p>
+        <p>Desarrollado por <a href="https://hilandopixel.com" target="_blank">HilandoPixel</a>&copy;Todos los derechos reservados.</p>
 
-                        <div class="row">
-                            <div class="col-lg-12 col-sm-12 col-12">
-                                <p class="blue-light-text">Colaboradores</p>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://www.spg-pack.com/" target="_blank"><img src="assets/images/logo_spg_blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://www.innovaocular.com/" target="_blank"><img src="assets/images/innovaocular-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://superatesports.es/" target="_blank"><img src="assets/images/logo_superatesports_blanco_web.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="tel:+34654435849"><img src="assets/images/catalana-occidente-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://lavanderiaposadas.es/" target="_blank"><img src="assets/images/logo_lip_blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://bellidoextintores.com/" target="_blank"><img src="assets/images/extintores-bellido-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://arimaquinaria.com/" target="_blank"><img src="assets/images/ari-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://gallarcres.com/" target="_blank"><img src="assets/images/gallarcres-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://puntotramite.es/" target="_blank"><img src="assets/images/puntotramite-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://hotelabadi.com/" target="_blank"><img src="assets/images/abadi-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://www.tosfrit.es/" target="_blank"><img src="assets/images/tosfrit-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://eltrenrestaurante-albergue.com/" target="_blank"><img src="assets/images/restaurante-estacion-cabra-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://saile.es/" target="_blank"><img src="assets/images/logo_saile_blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://iberoturf.com/" target="_blank"><img src="assets/images/iberoturf-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://tysa.es/" target="_blank"><img src="assets/images/logo_ford_tysa_blanco_web.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://gruposercolu.com/" target="_blank"><img src="assets/images/grupo-sercolu-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://tabernaloschopos.com/" target="_blank"><img src="assets/images/loschopos-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://www.mercadovictoria.com/" target="_blank"><img src="assets/images/mercadovictoria-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://www.ptvtelecom.com/" target="_blank"><img src="assets/images/PTV_blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-sm-4 col-6">
-                                <div class="item">
-                                    <a href="https://www.toplevelsl.com/" target="_blank"><img src="assets/images/toplevel-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
+    </footer>
 
-                        <div class="row">
-                            <div class="col-lg-2 col-sm-4 col-4">
-                                <div class="item">
-                                    <a href="https://caprichoandaluz.com/" target="_blank"><img src="assets/images/logo_caprichoandaluz_blanco_web.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-sm-4 col-4">
-                                <div class="item">
-                                    <a href="https://www.destinosubbetica.es/" target="_blank"><img src="assets/images/destino-subbetica-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-sm-4 col-4">
-                                <div class="item">
-                                    <a href="https://citsubbetica.org/" target="_blank"><img src="assets/images/cit-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-sm-4 col-4">
-                                <div class="item">
-                                    <a href="https://ajeandalucia.org/cordoba/" target="_blank"><img src="assets/images/aje-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-sm-4 col-4">
-                                <div class="item">
-                                    <a href="https://www.facebook.com/DeportesFernandoPinedaRunning" target="_blank"><img src="assets/images/logo_fernandopineda_blanco_web.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-sm-4 col-4">
-                                <div class="item">
-                                    <a href="https://bodegasmencianas.es/" target="_blank"><img src="assets/images/bodegas-mencianas-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-sm-4 col-4">
-                                <div class="item">
-                                    <a href="https://crismona.com/crismona-crismona/" target="_blank"><img src="assets/images/crismonalogo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                            <div class="col-lg-2 col-sm-4 col-4">
-                                <div class="item">
-                                    <a href="https://g.co/kgs/EA77Juy" target="_blank"><img src="assets/images/casa-morejon-logo-blanco.png" alt=""></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+    <script>
+        // Referencias a los elementos
+        const navLinksContainer = document.querySelector('.nav-links');
+        const menuBtn = document.querySelector('.mobile-menu-btn');
+        const links = document.querySelectorAll('.nav-links a'); // Todos los enlaces del menú
 
-                <footer>
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <p>
-                                    Copyright © 2025
-                                    <br>Designed by <a title="CSS Templates" rel="sponsored" href="https://templatemo.com" target="_blank">TemplateMo</a> Distributed By <a title="CSS Templates" rel="sponsored" href="https://themewagon.com" target="_blank">ThemeWagon</a>
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+        // 1. Función para alternar abrir/cerrar (botón hamburguesa)
+        function toggleMenu() {
+            navLinksContainer.classList.toggle('active');
 
-                <!-- Scripts -->
-                <!-- Bootstrap core JavaScript -->
-                <script src="vendor/jquery/jquery.min.js"></script>
-                <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-                <script src="assets/js/isotope.min.js"></script>
-                <script src="assets/js/owl-carousel.js"></script>
-
-                <script src="assets/js/tabs.js"></script>
-                <script src="assets/js/swiper.js"></script>
-                <script src="assets/js/custom.js"></script>
-                <script>
-        var interleaveOffset = 0.5;
-
-        var swiperOptions = {
-            loop: true,
-            speed: 1000,
-            grabCursor: true,
-            watchSlidesProgress: true,
-            mousewheelControl: true,
-            keyboardControl: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev"
-            },
-            on: {
-                progress: function () {
-                    var swiper = this;
-                    for (var i = 0; i < swiper.slides.length; i++) {
-                        var slideProgress = swiper.slides[i].progress;
-                        var innerOffset = swiper.width * interleaveOffset;
-                        var innerTranslate = slideProgress * innerOffset;
-                        swiper.slides[i].querySelector(".slide-inner").style.transform =
-                            "translate3d(" + innerTranslate + "px, 0, 0)";
-                    }
-                },
-                touchStart: function () {
-                    var swiper = this;
-                    for (var i = 0; i < swiper.slides.length; i++) {
-                        swiper.slides[i].style.transition = "";
-                    }
-                },
-                setTransition: function (speed) {
-                    var swiper = this;
-                    for (var i = 0; i < swiper.slides.length; i++) {
-                        swiper.slides[i].style.transition = speed + "ms";
-                        swiper.slides[i].querySelector(".slide-inner").style.transition =
-                            speed + "ms";
-                    }
-                }
+            // Opcional: Cambiar el icono de ☰ a X visualmente
+            if (navLinksContainer.classList.contains('active')) {
+                menuBtn.innerHTML = "✕"; // Cambia a X
+            } else {
+                menuBtn.innerHTML = "☰"; // Vuelve a hamburguesa
             }
-        };
+        }
 
-        var swiper = new Swiper(".swiper-container", swiperOptions);
-                </script>
+        // 2. Cerrar el menú al hacer clic en cualquier enlace
+        links.forEach(link => {
+            link.addEventListener('click', () => {
+                navLinksContainer.classList.remove('active');
+                menuBtn.innerHTML = "☰"; // Resetea el icono
+            });
+        });
 
+        // 3. Cerrar si se hace clic fuera del menú (Mejora de experiencia de usuario)
+        document.addEventListener('click', (e) => {
+            // Si el clic NO fue en el menú Y NO fue en el botón
+            if (!navLinksContainer.contains(e.target) && !menuBtn.contains(e.target)) {
+                navLinksContainer.classList.remove('active');
+                menuBtn.innerHTML = "☰";
+            }
+        });
+
+        // 4. Efecto Sticky Navbar (Ya lo tenías, lo mantenemos)
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle('scrolled', window.scrollY > 50);
+        });
+
+        // 5. Lógica de Precios (Ya la tenías, la mantenemos)
+        document.addEventListener('DOMContentLoaded', function () {
+            const priceChangeDate = new Date(2026, 15, 2);
+            const today = new Date();
+            const earlyCells = document.querySelectorAll('.price-early');
+            const lateCells = document.querySelectorAll('.price-late');
+
+            if (today < priceChangeDate) {
+                earlyCells.forEach(cell => cell.classList.add('active-price'));
+                lateCells.forEach(cell => cell.style.textDecoration = "none");
+            } else {
+                lateCells.forEach(cell => cell.classList.add('active-price'));
+                earlyCells.forEach(cell => cell.style.textDecoration = "line-through");
+            }
+        });
+    </script>
 </body>
 </html>
