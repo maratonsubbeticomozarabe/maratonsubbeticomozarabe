@@ -320,6 +320,10 @@ footer {
     opacity: 0.7;
 }
 
+.max-width-100 {
+    max-width: 100%;
+}
+
 
 /* La mitad de la imagen */
 .carreras-image-col {
