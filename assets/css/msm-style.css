@@ -37,6 +37,10 @@ a {
     color: inherit;
 }
 
+.white{
+    background-color: white !important;
+}
+
 /* NAVBAR STICKY */
 header {
     position: fixed;
