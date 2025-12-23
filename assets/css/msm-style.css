@@ -1,0 +1,416 @@
+/* VARIABLES Y RESET */
+:root {
+    --primary: #062744;
+    --secondary: #1790b1;
+    --text: #fee5ce;
+    --white: #ffffff;
+    --dark-overlay: rgba(6, 39, 68, 0.75);
+    --transition: all 0.3s ease;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: var(--secondary);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* NAVBAR STICKY */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: var(--transition);
+    padding: 20px 0;
+    background: transparent;
+}
+
+    header.scrolled {
+        background-color: var(--primary);
+        box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        padding: 10px 0;
+    }
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.primary {
+    background-color: var(--primary);
+    color: var(--secondary);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+.logo {
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: var(--secondary);
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+    .nav-links a {
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: var(--transition);
+    }
+
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+
+.cta-btn {
+    background-color: var(--secondary);
+    color: var(--primary);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+}
+
+    .cta-btn:hover {
+        background-color: var(--text);
+        color: var(--primary);
+    }
+
+/* HERO SECTION CON VIDEO */
+.hero {
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+}
+
+.video-bg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+    object-fit: cover;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-overlay);
+    z-index: -1;
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* SECCIONES GENÉRICAS */
+section {
+    padding: 80px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--primary);
+    position: relative;
+}
+
+    .section-title::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: var(--text);
+        margin: 10px auto 0;
+    }
+
+/* TABLA DE INSCRIPCIONES RESPONSIVE */
+.pricing-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: var(--text) !important;
+    border-radius: 10px;
+    overflow: hidden;
+    color: var(--secondary);
+}
+
+    .pricing-table th, .pricing-table td {
+        padding: 20px;
+        text-align: left;
+        border-bottom: 1px solid rgba(254, 229, 206, 0.1);
+        color: var(--primary);
+    }
+
+    .pricing-table th {
+        background-color: var(--text) !important;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--primary);
+    }
+
+.price-col {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: var(--secondary);
+    background-color: var(--text) !important;
+}
+
+    .price-col.active-price {
+        color: var(--secondary);
+        font-size: 1.3rem;
+        position: relative;
+    }
+
+        .price-col.active-price::after {
+            content: 'VIGENTE';
+            display: block;
+            font-size: 0.6rem;
+            color: var(--text);
+        }
+
+.mod-desc {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: 5px;
+}
+
+/* ESTILOS MOBILE */
+.mobile-menu-btn {
+    display: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 70%;
+        background: var(--primary);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: 0.5s;
+        box-shadow: -5px 0 15px rgba(0,0,0,0.5);
+    }
+
+        .nav-links.active {
+            right: 0;
+        }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    /* Tabla responsive tipo tarjeta */
+    .pricing-table, .pricing-table thead, .pricing-table tbody, .pricing-table th, .pricing-table td, .pricing-table tr {
+        display: block;
+        background-color: var(--text);
+    }
+
+        .pricing-table thead tr {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        .pricing-table tr {
+            border-bottom: 2px solid var(--secondary);
+            margin-bottom: 20px;
+        }
+
+        .pricing-table td {
+            border: none;
+            position: relative;
+            padding-left: 50%;
+            text-align: right;
+            color: var(--primary);
+        }
+
+            .pricing-table td:before {
+                position: absolute;
+                top: 20px;
+                left: 20px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                text-align: left;
+                font-weight: bold;
+                color: var(--secondary);
+                content: attr(data-label);
+            }
+
+    .mod-desc {
+        text-align: right;
+        display: block;
+        margin-left: auto;
+        color: var(--primary);
+    }
+}
+
+footer {
+    background: #041a2f;
+    text-align: center;
+    padding: 40px;
+    margin-top: 50px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+
+/* La mitad de la imagen */
+.carreras-image-col {
+    flex: 1; /* Ocupa el 50% del espacio disponible */
+    min-width: 300px; /* Evita que se haga demasiado pequeña antes de saltar */
+}
+
+    .carreras-image-col img {
+        width: 100%;
+        height: auto;
+        border-radius: 15px; /* Bordes redondeados para estética moderna */
+        box-shadow: 0 10px 20px rgba(0,0,0,0.3); /* Sombra para darle profundidad */
+        border: 2px solid var(--secondary); /* Un fino borde con el color corporativo */
+    }
+
+/* --- SECCIÓN PATROCINADORES --- */
+.sponsors-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Espacio entre logos */
+    margin-top: 40px;
+    color: var(--primary);
+}
+
+.sponsor-item {
+    transition: var(--transition);
+    opacity: 0.7;
+    filter: grayscale(100%); /* Elegante: blanco y negro por defecto */
+    display: flex;
+    justify-content: center;
+    color: var(--primary);
+}
+
+    .sponsor-item:hover {
+        opacity: 1;
+        filter: grayscale(0%); /* Color original al pasar el mouse */
+        transform: translateY(-5px); /* Pequeña elevación */
+    }
+
+    .sponsor-item img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Asegura que el logo no se deforme */
+        display: block;
+    }
+
+/* NIVELES DE IMPORTANCIA */
+
+/* Nivel 1: Oro (Más grandes, ocupan más) */
+.tier-gold {
+    color: var(--primary);
+    flex-basis: 100%; /* En móvil ocupan todo el ancho */
+    max-width: 300px; /* Tamaño máximo en escritorio */
+    margin: 0 20px;
+}
+
+/* Nivel 2: Plata */
+.tier-silver {
+    flex-basis: 45%;
+    max-width: 180px;
+}
+
+/* Nivel 3: Bronce */
+.tier-bronze {
+    flex-basis: 30%;
+    max-width: 120px;
+}
+
+/* Títulos de las categorías de patrocinio (Opcional) */
+.sponsor-tier-title {
+    width: 100%;
+    text-align: center;
+    margin: 30px 0 15px;
+    font-size: 0.9rem;
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+
+/* AJUSTES RESPONSIVE */
+@media (max-width: 768px) {
+    .tier-gold {
+        max-width: 220px;
+    }
+
+    .tier-silver {
+        max-width: 140px;
+    }
+
+    .tier-bronze {
+        max-width: 100px;
+        flex-basis: 40%;
+    }
+    /* En móvil los pequeños se ponen de 2 en 2 */
+}
