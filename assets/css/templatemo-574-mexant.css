@@ -822,6 +822,10 @@ banner
 	padding-bottom: 20px !important;
 }
 
+.paddingTop {
+    padding-top: 30px !important;
+}
+
 /*
 ---------------------------------------------
 services
